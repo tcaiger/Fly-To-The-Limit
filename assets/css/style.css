@@ -1,0 +1,848 @@
+ /*------------------Flex-box Classes--------------*/ 
+   
+.flex{ display: flex; }    
+.flex-row{ flex-direction: row; }
+.flex-column{ flex-direction: column; } 
+
+.flex-j-start{ justify-content: flex-start; }
+.flex-j-end{ justify-content: flex-end; }
+.flex-j-center{ justify-content: center; }
+.flex-j-between{ justify-content: space-between; }
+
+.flex-a-start{ align-items: flex-start; }
+.flex-a-end{ align-items: flex-end; }
+.flex-a-center{ align-items: center; }
+.flex-a-stretch{ align-items: stretch; } 
+
+.flex-1{ flex: 1; }
+.flex-2{ flex: 2; }
+.flex-3{ flex: 3; }
+.flex-4{ flex: 4; } 
+ 
+/*------------- Overall Styling ----------*/
+
+*{box-sizing: border-box;}
+
+body{
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Roboto', sans-serif;
+	 font-weight: 400;	
+}
+.wrapper{
+	max-width:1000px;
+	margin: 0 auto;
+}
+
+/*-------------- Header ----------*/
+
+header{ 
+	margin-top: 0;
+	padding: 20px;
+}
+nav{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.logo img{
+	padding-right: 10px;
+	height: 45px;
+}
+.logo h3{
+	font-family: 'Vollkorn', serif;
+	color: #fff;
+	font-size: 1.3em;
+	padding: 0;
+	margin: 0;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+.logo p{
+	line-height: 1;
+	font-size: 0.5em;
+	padding: 0;
+	margin: -7px 0 0 0;
+	color: white;
+	letter-spacing: 3px;
+}
+.logo span{
+	font-size: 1.3em;
+	font-variant: 
+}
+
+li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	padding-left: 1.8em;
+	letter-spacing: 0px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #fff;
+	transition: all 0.3s;
+}
+nav .button{
+	padding: 1em 1.1em;
+	margin: 0 1em; 
+	border: 1px solid #fff;
+	border-radius: 20px;
+	transition: all 0.3s;
+}
+nav .button:hover{
+	background-color: #fff;
+	color: #333;
+}
+header h1{
+	font-size: 3em; 
+	color: #fff;
+}
+header h2{
+	color: #fff;
+}
+.landing{ 
+	background-image:url(../img/landings/landing1.jpg);
+	background-repeat: no-repeat;
+	height: 500px;
+	background-size: cover;
+	background-position:  50% 70%;
+}
+
+/*--------- Footer -----------*/
+
+footer{
+	margin: 0;
+	padding: 0;
+	background-color: #333;
+	text-align: center;
+}
+footer ul{
+	margin: 0;
+	padding: 40px 0 40px 0;
+}
+footer p{
+	color: #ddd;
+	padding-bottom: 50px;
+	margin: 0;
+	font-size: 14px;
+}
+footer a{
+	color: #ddd;
+}
+
+/*----------- Social Media -------------*/
+
+.social-media{
+	background-color: #ddd;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.social-media h1{
+	margin: 40px 0;
+}
+.icon-holder{
+	border-top: 1px solid #bbb;
+	margin: 0;
+	padding: 0;
+}
+.social-media i{
+	margin: 30px 10px;
+	transition: all 0.2s;
+	transition-timing-function: ease;
+}
+.social-media i:hover{
+	transform: translateY(-5px);
+	cursor: pointer;
+	color: #2222DD;
+}
+
+/*-------- General Styling ----------*/
+
+main,
+section{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 3em 0;
+}
+h1{
+	font-size: 28px;
+	color: #333;
+	font-weight: 500;
+	margin: 0;
+	padding: 2em 0 0 0;
+	text-align: center;
+	text-transform: capitalize;
+}
+h2{
+	font-size: 18px;	
+	font-weight: 400;
+	margin: 18px 0 18px 0;
+	color: #888;
+	padding: 0;
+	text-align: center;
+	line-height: 1.4;
+	text-transform: capitalize;
+}
+p{
+	font-size: 16px;
+	line-height: 1.4;
+	color: #666;
+}
+h3{
+	padding: 0;
+	margin: 0;
+	font-weight: 500;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #999;
+}
+.img-holder img{
+	max-height: 200px;
+	margin: 0 50px;
+}
+.caption-holder{
+	margin: 0 50px;
+	padding: 20px 0;
+}
+.overline{
+	border-top: 1px solid #ddd;
+}
+.underline{
+	border-bottom: 1px solid #ddd;
+}
+.left-line{
+	border-left: 1px solid #bbb;
+}
+button,
+input[type=submit]{
+	background-color: #2980b9;
+	border: none;
+	color: #fff;
+	border-radius: 3px;
+	padding: 10px 50px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	transition: background 0.3s;
+	transition-timing-function: ease;
+}
+button:hover,
+input[type=submit]:hover{
+	background: #3498db;
+	cursor: pointer;
+}
+input[type=radio]{
+	display: none;
+}
+ 
+/*--------------- Index Page -----------------*/
+
+.landing-container{
+	position: relative;
+	height: 700px;
+	padding-top: 20px;
+}
+.left-arrow{
+	position: absolute;
+	top: 300px;
+	left:20px;
+	color: rgba(255,255,255,0.6);
+}
+.right-arrow{
+	position: absolute;
+	top: 300px;
+	right: 20px;
+	color: rgba(255,255,255,0.6);
+}
+.right-arrow:hover,
+.left-arrow:hover{
+	cursor: pointer;
+	color: rgba(255,255,255,0.9);
+}
+.landing-index1,
+.landing-index2,
+.landing-index3{
+	position: absolute;
+	top:0;
+	width: 100%;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	height: 700px;
+	background-size: cover;
+	background-position: center center;
+	opacity: 0;
+	z-index: -1;
+	transition: all 0.8s;
+	transition-timing-function: ease;
+}
+.landing-index1{
+	background-image:url(../img/landings/landing1.jpg);
+}
+.landing-index2{
+	background-image:url(../img/landings/landing2.jpg);
+}
+.landing-index3{
+	background-image:url(../img/landings/landing3.jpg);
+}
+.visible{
+	opacity: 1;
+}
+.landing-container h1{
+	padding-top: 150px;
+	font-size: 3em;
+	color: #fff;
+}
+.landing-container h2{
+	color: #fff;
+	letter-spacing: 5px;	
+	text-transform: uppercase;
+}
+.summary-section p{
+	line-height: 1.5;
+}
+.summary-section p::first-letter{
+	font-size: 26px;
+	
+	line-height: 0;
+}
+
+/*--- Make a booking & enquiry ribbons----*/
+
+.ribbon{
+	text-align: center;
+	background-color: #34495e;
+}
+.ribbon h1{
+	margin: 0;
+	padding: 60px 0 40px;
+	color: #eee;
+}
+.ribbon .button{
+	display: inline-block;
+	background-color: #2980b9;
+	border: none;
+	color: #fff;
+	border-radius: 3px;
+	padding: 10px 50px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	transition: background 0.3s;
+	transition-timing-function: ease;
+	margin-bottom: 60px;
+}
+.ribbon .button:hover{
+	background: #3498db;
+	cursor: pointer;
+}
+
+
+/*--- video section ---*/
+
+iframe{
+	margin: 50px auto;
+}
+
+
+/*---------- Screens that appear over images on hover------------*/
+
+.screen{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	position: absolute;
+	top:0;
+	text-align: center;
+	padding-top: 20%;
+	background-color: rgba(69,90,100, 0.0);
+	transition: all 0.3s;
+	transition-timing-function: ease;
+}
+.screen:hover{
+	background-color: rgba(65,74,88, 0.6);
+	cursor: pointer;
+}
+.screen h2,
+.screen h3{
+	color: rgba(69,90,100, 0.0);
+	transition: all 0.8s;
+	transition-timing-function: ease;
+}
+.screen:hover h2,
+.screen:hover h3{
+	color: rgba(255,255,255, 1.0);
+}
+
+/*------------ Side Navigations ----------*/
+
+.about label,
+.tours label,
+.book nav label{
+	display: block;
+	transition: all 0.3s;
+	transition-timing-function: ease;
+	border-right: 1px solid #bbb;
+	padding-right: 20px;
+}
+label h3{
+	color: #999;
+	margin: 0;
+	padding: 10px 0;
+	transition: all 0.3s;
+	transition-timing-function: ease;
+	z-index: 99;
+}
+label:hover h3{
+	color: #666;
+}
+.about label:hover,
+.tours label:hover,
+.book nav label:hover{
+	cursor: pointer;
+}
+
+/*------------- About Page ---------------*/
+
+.about{
+	position: relative;
+	height: 350px;
+}
+.about .img-holder img, 
+.about .caption-holder{
+	margin: 0 0 0 50px;
+}
+.about nav{
+	position: absolute;
+	top:70px;
+	left: 0;
+	text-align: right;
+}
+/*the pilot info sections when unselected*/
+.about .info-section{ 
+	position: absolute;
+	transition: all 0.3s;
+	transition-timing-function: ease;
+	top: 50px;
+	left: 0px;
+	opacity: 0;
+	z-index: -1;
+	max-width: 800px;
+}
+/*the pilot info sections when selected*/
+.about input:checked+div{
+	opacity: 1.0;
+	left: 200px;
+	z-index: 1;
+}
+
+/*------------ Tours Page ----------*/
+
+.tours{
+	position: relative;
+	height: 1500px;
+	padding-top: 0;
+}
+.tours nav{
+	position: absolute;
+	top:185px;
+	left: 0;
+	text-align: right;
+}
+
+/*the tour info sections when unselected*/
+.tours .info-section{ 
+	position: absolute;
+	transition: all 0.3s;
+	transition-timing-function: ease;
+	top: 50px;
+	left: 0px;
+	opacity: 0;
+	z-index: -1;
+	max-width: 800px;
+}
+
+/*the tour info sections when selected*/
+.tours input:checked+div{
+	opacity: 1.0;
+	left: 200px;
+	z-index: 1;
+}
+.tours .column h1,
+.book .column h1{
+	padding: 0;
+	margin:0;
+	text-align: left
+}
+.tours .column h2,
+.book .column h2{
+	margin: .5em 0 1em 0;
+	text-align: left;
+}
+.tours .info-section section:first-of-type h3{
+	margin: 1em 0 0 0;
+}
+.tours .info-section section:first-of-type .column:last-of-type{
+	padding-top: 30px;
+}
+.tours .img-holder{
+	
+	height: 200px;
+	margin: 0;
+}
+.tours img{
+	height: 200px;
+	width: 100%;
+	margin: 0;
+}
+.tours .column{
+	padding: 0 50px;
+}
+.tours li{
+	color: #666;
+	list-style: square;
+	padding: 0;
+	margin: 0;
+}
+.tours ul{
+	margin-top: 0;
+	padding-top: 0;
+}
+.tours h1{
+	text-align: left;
+	margin-left: 50px;
+}
+.tours h2{
+	text-align: left;
+	margin: .5em 0 1em 50px;
+}
+.tours section:last-child{
+	padding-top: 0;
+}
+
+
+/*------------ Gallery Page --------------*/
+
+.gallery-header h3{
+	padding: 0 10px;
+	margin: 20px 0;
+}
+.line{
+	border-top: 1px solid #ddd;
+}
+.gallery-row>div{
+	position: relative;
+	margin: 5px;
+	width: 100%;
+	max-height: 205px;
+}
+.gallery-row img{
+	width: 100%;
+	max-height: 205px;
+	margin: 0;
+	padding: 0;
+}
+
+/*------------- Contact Page -----------*/
+
+.contact{
+	padding-top: 20px;
+}
+.contact-column{
+	text-align: left;
+	padding: 0 0 0 80px;
+}
+.contact-column h3{
+	text-align: left;
+	margin: 20px 0;
+}
+.contact-column p{
+	margin: 0 0;
+}
+input[type=text]{
+	color: #888;
+	display: block;
+	margin: 10px 0;
+	outline: none;
+	font-size: 14px;
+	padding: 0.6em;
+	width: 250px;
+	border-radius: 4px;
+	border: 1px solid #bbb;
+}
+.contact textarea{
+	color: #888;
+	display: block;
+	margin: 10px 0;
+	outline: none;
+	font-size: 14px;
+	padding: 0.6em;
+	width: 350px;
+	height: 140px;
+	border-radius: 4px;
+	border: 1px solid #bbb;
+}
+.contact-column .icon-holder i{
+	margin: 0;
+	padding: 0;
+}
+.contact-column .icon-holder{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+.contact-column i{
+	display: inline;
+	margin: 0;
+	margin-right: 5px;
+	padding: 0;
+}
+/*Google maps*/
+#map-canvas{
+	height: 500px;
+	width: 100%;
+	margin: 0;
+}
+
+/*-------------- Booking Page -------------*/
+
+.book{
+	position: relative;
+	height: 760px;
+}
+.book nav{
+	position: absolute;
+	top:190px;
+	left: 0;
+	text-align: right;
+}
+
+/*This the booking page when not selected*/
+.book .info-section{ 
+	position: absolute;
+	transition: all 0.3s;
+	transition-timing-function: ease;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	z-index: -1;
+}
+
+/*Makess the booking page appear when selected from the side nav*/
+.book input:checked+div{
+	opacity: 1.0;
+	left: 250px;
+	z-index: 1;
+}
+.book .column:first-of-type{
+	position: relative;
+	padding-right: 200px;
+}
+.book .column:last-of-type{
+	position: relative;
+	top:0;
+	margin-top: 50px;
+	padding-left: 90px;
+	right:300px;
+	opacity: 0;
+	transition: all 0.2s;
+	transition-timing-function: ease;
+}
+
+/*Last is to put some space between the last row and the price element*/
+.last{
+	padding-bottom: 1.5em;
+}
+
+.book input[type=text]{
+	color: #999;
+	display: block;
+	margin: 10px 0;
+	outline: none;
+	font-size: 14px;
+	padding: 9px;
+	width: 200px;
+	border-radius: 4px;
+	border: 1px solid #bbb;
+}
+.book label p{
+	padding: 5px 0;
+	margin-left: 5px;
+	font-size: 14px;
+	color: #999;
+}
+.book button{
+	margin-top: 3em;
+}
+
+.book input[type="submit"]{
+	margin-top: 1em;
+}
+.book textarea{
+	color: #999;
+	display: block;
+	margin: 10px 0;
+	outline: none;
+	font-size: 14px;
+	padding: 0.6em;
+	width: 350px;
+	height: 112px;
+	border-radius: 4px;
+	border: 1px solid #bbb;
+}
+
+
+/*------custom selector drop down boxes----------*/
+
+.select{
+	position: relative;
+	cursor: pointer;
+}
+.select>p{
+	color: #999;
+	margin: 10px 0;
+	font-size: 14px;
+	padding: 8px;
+	width: 200px;
+	border-radius: 4px;
+	border: 1px solid #bbb;
+	z-index: 5;
+}
+.select div:hover{
+	cursor: pointer;
+}
+.select ul{
+	margin: 0;
+	padding:0;
+}
+.select ul li{
+	font-size: 14px;
+	padding: 0.6em 0;
+	color: #fff;
+	text-indent: 5%;
+	transition: all 0.3s;
+	transition-timing-function: ease;
+}
+.select ul>li:hover{
+	cursor: pointer;
+	background: #34495e;
+	color: white;
+}
+
+/*the down arrows on the drop down selectors*/
+.select i{
+	color: #999;
+	font-size: 14px;
+	margin-left: -30px;
+}
+.select div{
+	height: 0px;
+	opacity: 0;
+	z-index: -1;
+	background: #bbb;
+	overflow: hidden;
+	position: absolute;
+	top: 44px;
+	left: 0;
+	width: 200px;
+	border-radius: 0 0 4px 4px;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	transition: height 0.2s;
+	transition-timing-function: ease;
+}
+
+/*annimation for openning the drop down selectors*/
+
+.on{
+	animation-name: on;
+    animation-duration: 0.2s;
+	-webkit-animation-name: on;
+    -webkit-animation-duration: 0.2s;
+}
+.off{
+	animation-name: off;
+    animation-duration: 0.2s;
+	-webkit-animation-name: off;
+    -webkit-animation-duration: 0.2s;
+}
+
+@keyframes on{
+	10% {z-index: 10;opacity: 1;}
+	100% {opacity: 1; z-index: 10;}
+}
+@keyframes off{
+    0%   {opacity: 1; z-index: 10;}
+    99%  {opacity: 1; z-index: 10;}
+    100% {opacity: 0; z-index: 1;}
+}
+@-webkit-keyframes on{
+	10% {z-index: 10;opacity: 1;}
+	100% {opacity: 1; z-index: 10;}
+}
+@-webkit-keyframes off{
+    0%   {opacity: 1; z-index: 10;}
+    99%  {opacity: 1; z-index: 10;}
+    100% {opacity: 0; z-index: 1;}
+}
+
+
+/*expedition section formatting*/
+.book .container{
+	height: 28px;
+	overflow: hidden;
+	margin: 10px 0;
+	transition: all 0.2s;
+}
+.book .container h3{
+	margin: 0;
+}
+.book .container h3:hover,
+.book .container i:hover{
+	cursor: pointer;
+}
+.book .container h3+i{
+	padding-right: 160px;
+}
+
+/*Classes for the expedition section drop down menus*/
+
+.open{
+	height: 200px;
+}
+.close{
+	height: 28px;
+}
+
+/*Form validation messages*/
+
+.message{
+	height: 20px;
+	padding-left: 0.5em;
+	padding-bottom: 1em;
+	color: #aaa;
+	font-size: 0.8em;
+	width: 150px;
+}
+.message.hide{
+	display: none;
+}
+.message.error{
+	opacity: 1;
+	color: #F44336;
+	font-weight: bold;
+	font-style: normal;
+}
+.message.success{
+	opacity: 1;
+	color: #4CAF50;
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+
+
+
+
